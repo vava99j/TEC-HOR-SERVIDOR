@@ -35,7 +35,8 @@ export async function createPlant(usuarioId, horarios, foto_url) {
     "INSERT INTO plantas (usuario_id, horarios, foto_url) VALUES (?, ?, ?)",
     [usuarioId, horarios, foto_url]
   );
-  return getPlant(result.insertId);
+   const [rows] = await pool.query("SELECT * FROM plantas WHERE id = ?", [result.insertId]);
+  return rows[0];
 }
 
 export async function createUser(telefone, senha_hash) {
