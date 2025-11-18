@@ -40,8 +40,8 @@ app.get("/plantas", async (req, res, next) => {
 app.get("/API/:id", async (req, res, next) => {
   try {
     const id = req.params.id;
-    const planta = await API_key(id);
-    res.send(planta);
+    const key = await API_key(id);
+    res.send(key);
   } catch (err) {
     next(err);
   }

@@ -11,9 +11,10 @@ const pool = mysql.createPool({
 });
 
 export async function API_key(id) {
-  const [rows] = await pool.query("SELECT * FROM api_key WHERE id = ?", [id]);
-  return rows;
+  const [rows] = await pool.query("SELECT key_api FROM api_key WHERE id = ?", [id]);
+  return rows.length > 0 ? rows[0].key_api : null;
 }
+
 
 export async function getPlantByUser(id) {
   const [rows] = await pool.query("SELECT * FROM plantas WHERE usuario_id = ?", [id]);
@@ -110,3 +111,5 @@ export async function ContatoWeb(nome, email, mensagem) {
   );
   return result.insertId;
 }
+
+
