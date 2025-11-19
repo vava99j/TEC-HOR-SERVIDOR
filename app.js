@@ -41,11 +41,17 @@ app.get("/API/:id", async (req, res, next) => {
   try {
     const id = req.params.id;
     const key = await API_key(id);
-    res.send(key);
+
+    if (!key) {
+      return res.status(404).json({ error: "Chave não encontrada" });
+    }
+
+    res.json([{ key_api: key }]); // ✔ retorna array igual o frontend espera
   } catch (err) {
     next(err);
   }
 });
+
 
 app.get("/plantas/:id", async (req, res, next) => {
   try {
