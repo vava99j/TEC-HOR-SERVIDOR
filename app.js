@@ -46,7 +46,7 @@ app.get("/API/:id", async (req, res, next) => {
       return res.status(404).json({ error: "Chave não encontrada" });
     }
 
-    res.json([{ key_api: key }]); // ✔ retorna array igual o frontend espera
+    res.json([{ key_api: key }]);
   } catch (err) {
     next(err);
   }
@@ -223,6 +223,10 @@ app.get("/contato", (req, res) => {
 
 app.get("/home", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+app.get("/Tec-Hor", (req, res) => {
+  res.sendFile(path.join(__dirname, "app", "Tec-Hor.apk"));
 });
 
 app.listen(PORT, () => {
