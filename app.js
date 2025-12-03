@@ -207,7 +207,7 @@ app.post("/enviar", async (req, res) => {
 });
 
 
-app.use(express.static(path.join(__dirname, "public_Tec-Hor")));
+app.use("/Tec-hor",express.static(path.join(__dirname, "public_Tec-Hor")));
 
 app.get("/Tec-Hor/sobre", (req, res) => {
   res.sendFile(path.join(__dirname, "public_Tec-Hor", "sobre.html"));
