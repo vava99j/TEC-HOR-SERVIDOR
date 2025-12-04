@@ -4,7 +4,6 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "npm i && npx nodemon app.js",
     "test": "npx nodemon app.js",
     "OpenServer": "cmd.exe /c openServer.bat"
   },

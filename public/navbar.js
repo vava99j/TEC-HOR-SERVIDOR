@@ -11,10 +11,10 @@ template.innerHTML = `
     <button class="menu-btn">☰</button>
       </div>
     <ul id="menu">
-      <li><a href="/Tec-Hor/home">Home</a></li>
-      <li><a href="/Tec-Hor/sobre">Sobre Nós</a></li>
-      <li><a href="/Tec-Hor/infos">Infos Técnicas</a></li>
-      <li><a href="/Tec-Hor/contato">Contacte-nos</a></li>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/sobre">Sobre Nós</a></li>
+      <li><a href="/infos">Infos Técnicas</a></li>
+      <li><a href="/contato">Contacte-nos</a></li>
       <li><a id="modeToggle">🌙</a></li>      
     
       </ul>

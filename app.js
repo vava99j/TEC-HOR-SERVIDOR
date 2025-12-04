@@ -207,26 +207,26 @@ app.post("/enviar", async (req, res) => {
 });
 
 
-app.use(express.static(path.join(__dirname, "public_Tec-Hor")));
+app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/Tec-Hor/sobre", (req, res) => {
-  res.sendFile(path.join(__dirname, "public_Tec-Hor", "sobre.html"));
+app.get("/sobre", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "sobre.html"));
 });
 
-app.get("/Tec-Hor/infos", (req, res) => {
-  res.sendFile(path.join(__dirname, "public_Tec-Hor", "infos.html"));
+app.get("/infos", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "infos.html"));
 });
 
-app.get("/Tec-Hor/contato", (req, res) => {
-  res.sendFile(path.join(__dirname, "public_Tec-Hor", "contato.html"));
+app.get("/contato", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "contato.html"));
 });
 
-app.get("/Tec-Hor/home", (req, res) => {
-  res.sendFile(path.join(__dirname, "public_Tec-Hor", "index.html"));
+app.get("/home", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.get("/Tec-Hor", (req, res) => {
-  res.sendFile(path.join(__dirname, "app_Tec-Hor", "Tec-Hor.apk"));
+  res.sendFile(path.join(__dirname, "app", "Tec-Hor.apk"));
 });
 
 app.listen(PORT, () => {
