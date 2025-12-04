@@ -7,7 +7,7 @@ template.innerHTML = `
 
   <div class="navbar">
   <div id='navbarrow'>
-    <a href="/home" class="logo"><img src="img/icon.png" alt="Logo"></a>
+    <a href="/Tec-Hor/home" class="logo"><img src="img/icon.png" alt="Logo"></a>
     <button class="menu-btn">☰</button>
       </div>
     <ul id="menu">
